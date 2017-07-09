@@ -37,7 +37,32 @@
         </div>
     </div>
 </div>
-<!--end brand modal-->
+<!--End brand modal-->
+<!--Start internet modal-->
+<div class="modal fade" id="internet-modal" role="dialog">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header modal-header-custom">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <div class="modal-title">
+                    <h1 class="text-center">بازاریابی اینترنتی</h1>
+                </div>
+            </div>
+            <div class="modal-body modal-body-custom">
+                <div class="thumbnail-custom">
+                    <p>
+                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.
+                        چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی
+                        مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه
+                        درصد گذشته
+                    </p>
+                </div>
+                <button type="button" class="btn btn-info center-block btn-lg">ورود به فرم</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--end internet modal-->
 <!--Start slider-->
 <section class="container-fluid slideshow" id="slideshow">
     <div class="row ">
@@ -57,20 +82,10 @@
             <div class="col-sm-12 col-md-6 wow bounceInRight">
                 <div class="thumbnail-custom">
                     <h2> بازاریابی و برندینگ</h2>
-                    <h3>
-                        <a href="#" data-toggle="modal" data-target="#brand-modal">
-                            مشاوره در زمینه انواع روشهاي تولید
-                            محتوا
-                        </a>
-                    </h3>
+                    <h3><a href="#" data-toggle="modal" data-target="#brand-modal">مشاوره در زمینه انواع روشهاي تولیدمحتوا</a></h3>
                     <h3><a href="#" data-toggle="modal" data-target="#brand-modal"> راهکارهاي فروش مستقیم</a></h3>
                     <h3><a href="#" data-toggle="modal" data-target="#brand-modal">مشاوره ایجادکانال هاي توزیع</a></h3>
-                    <h3>
-                        <a href="#" data-toggle="modal" data-target="#brand-modal">
-                            تولید انواع محتواها شامل: فیلم، صوت،
-                            متن، اینفوگرافیک، نرمافزارهاي
-                        </a>
-                    </h3>
+                    <h3><a href="#" data-toggle="modal" data-target="#brand-modal">تولید انواع محتواها شامل: فیلم، صوت،متن، اینفوگرافیک، نرمافزارهاي</a></h3>
                 </div>
                 <button type="button" class="btn btn-warning btn-lg center-block wow bounceInUp">
                     ورورد به بخش برندینگ
@@ -79,7 +94,7 @@
             <div class="col-sm-12 col-md-6 wow bounceInLeft">
                 <div class="thumbnail-custom box2">
                     <h2>بازاریابی اینترنتی</h2>
-                    <h3><a href="#" data-toggle="modal" data-target="#brand-modal">طراحی وبسایت و فرایندهاي آن</a></h3>
+                    <h3><a href="#" data-toggle="modal" data-target="#internet-modal">طراحی وبسایت و فرایندهاي آن</a></h3>
                     <h3>
                         <a href="#" data-toggle="modal" data-target="#brand-modal">
                             تولید محتواي سایت و شبکه هاي
@@ -87,11 +102,11 @@
                         </a>
                     </h3>
                     <h3>
-                        <a href="#" data-toggle="modal" data-target="#brand-modal">بازاریابی ایمیلی، تبلیغات بنری</a>
+                        <a href="#" data-toggle="modal" data-target="#internet-modal">بازاریابی ایمیلی، تبلیغات بنری</a>
                     </h3>
-                    <h3><a href="#" data-toggle="modal" data-target="#brand-modal">تهیه برنامه استراتژیک</a></h3>
+                    <h3><a href="#" data-toggle="modal" data-target="#internet-modal">تهیه برنامه استراتژیک</a></h3>
                 </div>
-                <a href="internet-marketing.html" style="text-decoration: none" target="_blank">
+                <a href="@Url.Action("internetmarketing","Home")" style="text-decoration: none;" target="_blank">
                     <button type="button" class="btn btn-warning btn-lg center-block wow bounceInUp">
                         ورورد به بخش
                         بازاریابی اینترنتی
@@ -103,6 +118,7 @@
 </section>
 <!--End brand section-->
 <!--Start insurance section-->
+
 <section class="container-fluid insurance img-style " id="insurance">
     <div class="row col-padding wow bounceInDown">
         <div class="title-section text-center">
@@ -280,7 +296,7 @@
             </div>
         </div>
     </div>
-    
+
 </section>
 <!--End develop section-->
 <!--Start resume-->
@@ -388,7 +404,7 @@
             </div>
         </div>
     </div>
-    
+
 </section>
 <!--End resume-->
 <!--Start gallery-->
@@ -527,7 +543,7 @@
             </div>
         </div>
     </div>
-    
+
 </section>
 <!--End gallery-->
 <!--ُStart link section-->
@@ -538,91 +554,77 @@
                 <h1 class="wow bounceInDown">لینک ها</h1>
             </div>
             <div class="row">
-
                 <div class="gallery-slider">
-                    <div class="col-xs-12 col-sm-6 col-md-3">
-                        <div>
-                            <img src="~/Content/img/members/member.jpg"
-                                 class="center-block img-thumbnail img-responsive" alt="img">
-                            <p>نمایش کامل</p>
+                    <div class="col-xs-12 col-sm-6 col-md-3 padding wow fadeIn">
+                        <div class="ih-item square effect6 from_top_and_bottom">
+                            <div class="img">
+                                <img src="~/Content/img/logo/1.jpg" class="img-responsive center-block img-rounded" alt="img" />
+                            </div>
+                            <a href="#">
+                                <h2 class="caption-custom text-center">رزومه سوم</h2>
+                            </a>
                         </div>
                     </div>
-
-                </div>
-                <div class="col-xs-12 col-sm-6 col-md-3">
-                    <div class="gallery-slider">
-                        <div class="col-xs-12 col-sm-6 col-md-3">
-                            <div>
-                                <img src="~/Content/img/members/member.jpg"
-                                     class="center-block img-thumbnail img-responsive" alt="img">
-                                <p>نمایش کامل</p>
+                    <div class="col-xs-12 col-sm-6 col-md-3 padding wow fadeIn">
+                        <div class="ih-item square effect6 from_top_and_bottom">
+                            <div class="img">
+                                <img src="~/Content/img/logo/2.jpg" class="img-responsive center-block img-rounded" alt="img" />
                             </div>
+                            <a href="#">
+                                <h2 class="caption-custom text-center">رزومه سوم</h2>
+                            </a>
                         </div>
                     </div>
-                </div>
-                <div class="col-xs-12 col-sm-6 col-md-3">
-                    <div class="gallery-slider">
-                        <div class="col-xs-12 col-sm-6 col-md-3">
-                            <div>
-                                <img src="~/Content/img/members/member.jpg"
-                                     class="center-block img-thumbnail img-responsive" alt="img">
-                                <p>نمایش کامل</p>
+                    <div class="col-xs-12 col-sm-6 col-md-3 padding wow fadeIn">
+                        <div class="ih-item square effect6 from_top_and_bottom">
+                            <div class="img">
+                                <img src="~/Content/img/logo/3.jpg" class="img-responsive center-block img-rounded" alt="img" />
                             </div>
+                            <a href="#">
+                                <h2 class="caption-custom text-center">رزومه سوم</h2>
+                            </a>
                         </div>
                     </div>
-                </div>
-                <div class="col-xs-12 col-sm-6 col-md-3">
-                    <div class="gallery-slider">
-                        <div class="col-xs-12 col-sm-6 col-md-3">
-                            <div>
-                                <img src="~/Content/img/members/member.jpg"
-                                     class="center-block img-thumbnail img-responsive" alt="img">
-                                <p>نمایش کامل</p>
+                    <div class="col-xs-12 col-sm-6 col-md-3 padding wow fadeIn">
+                        <div class="ih-item square effect6 from_top_and_bottom">
+                            <div class="img">
+                                <img src="~/Content/img/logo/4.jpg" class="img-responsive center-block img-rounded" alt="img" />
                             </div>
+                            <a href="#">
+                                <h2 class="caption-custom text-center">رزومه سوم</h2>
+                            </a>
                         </div>
                     </div>
-                </div>
-                <div class="col-xs-12 col-sm-6 col-md-3">
-                    <div class="gallery-slider">
-                        <div class="col-xs-12 col-sm-6 col-md-3">
-                            <div>
-                                <img src="~/Content/img/members/member.jpg"
-                                     class="center-block img-thumbnail img-responsive" alt="img">
-                                <p>نمایش کامل</p>
+                    <div class="col-xs-12 col-sm-6 col-md-3 padding wow fadeIn">
+                        <div class="ih-item square effect6 from_top_and_bottom">
+                            <div class="img">
+                                <img src="~/Content/img/members/member3.jpg" class="img-responsive center-block img-rounded" alt="img" />
                             </div>
+                            <a href="#">
+                                <h2 class="caption-custom text-center">رزومه سوم</h2>
+                            </a>
                         </div>
                     </div>
-                </div>
-                <div class="col-xs-12 col-sm-6 col-md-3">
-                    <div class="gallery-slider">
-                        <div class="col-xs-12 col-sm-6 col-md-3">
-                            <div>
-                                <img src="~/Content/img/members/member.jpg"
-                                     class="center-block img-thumbnail img-responsive" alt="img">
-                                <p>نمایش کامل</p>
+                    <div class="col-xs-12 col-sm-6 col-md-3 padding wow fadeIn">
+                        <div class="ih-item square effect6 from_top_and_bottom">
+                            <div class="img">
+                                <a href="#">
+                                    <img src="~/Content/img/members/member3.jpg" class="img-responsive center-block img-rounded" alt="img" />
+                                </a>
                             </div>
+                            <a href="#">
+                                <h2 class="caption-custom text-center">رزومه سوم</h2>
+                            </a>
                         </div>
                     </div>
-                </div>
-                <div class="col-xs-12 col-sm-6 col-md-3">
-                    <div class="gallery-slider">
-                        <div class="col-xs-12 col-sm-6 col-md-3">
-                            <div>
-                                <img src="~/Content/img/members/member.jpg"
-                                     class="center-block img-thumbnail img-responsive" alt="img">
-                                <p>نمایش کامل</p>
+                    <div class="col-xs-12 col-sm-6 col-md-3 padding wow fadeIn">
+                        <div class="ih-item square effect6 from_top_and_bottom">
+                            <div class="img">
+                                <img src="~/Content/img/members/member3.jpg" class="img-responsive center-block img-rounded" alt="img" />
                             </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-6 col-md-3">
-                    <div class="gallery-slider">
-                        <div class="col-xs-12 col-sm-6 col-md-3">
-                            <div>
-                                <img src="~/Content/img/members/member.jpg"
-                                     class="center-block img-thumbnail img-responsive" alt="img">
-                                <p>نمایش کامل</p>
-                            </div>
+                            <a href="#">
+                                <h2 class="caption-custom text-center">رزومه سوم</h2>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -630,7 +632,6 @@
         </div>
     </div>
 </section>
-<!--ُEnd link section-->
 <!--Start  about us-->
 <section class="container-fluid about-us " id="about">
     <div class="row col-padding wow fadeInUp">

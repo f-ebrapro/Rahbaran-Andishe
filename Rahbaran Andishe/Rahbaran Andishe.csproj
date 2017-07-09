@@ -201,6 +201,11 @@
     <Content Include="Content\img\icons\coin.png" />
     <Content Include="Content\img\icons\percent.png" />
     <Content Include="Content\img\icons\register.png" />
+    <Content Include="Content\img\logo\1.jpg" />
+    <Content Include="Content\img\logo\2.jpg" />
+    <Content Include="Content\img\logo\3.jpg" />
+    <Content Include="Content\img\logo\3.png" />
+    <Content Include="Content\img\logo\4.jpg" />
     <Content Include="Content\img\logo\LOGO-new.png" />
     <Content Include="Content\img\logo\logo.png" />
     <Content Include="Content\img\logo\rahbaran.png" />
