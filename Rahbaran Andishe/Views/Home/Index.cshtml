@@ -1,0 +1,589 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<!--Start modal-->
+<div class="modal fade" id="gallery-modal">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-body">
+                <img id="modal-img" src="" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+<!--End modal-->
+<!--Start modal-order-->
+<div class="modal fade" id="modal-order">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header modal-header-custom">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h1 class="text-center modal-title">سفارش سرویس</h1>
+            </div>
+            <div class="modal-body modal-body-custom">
+                <form>
+                    <div class="form-group input-group">
+                        <span class="input-group-addon">نام :</span>
+                        <input class="form-control" type="text" placeholder="نام خود را وارد کنید">
+                    </div>
+                    <div class="form-group input-group">
+                        <span class="input-group-addon">نام خانوادگی :</span>
+                        <input class="form-control" type="text" placeholder="نام خانوادگی خود را وارد کنید">
+                    </div>
+                    <div class="form-group">
+                        <input type="checkbox" name="gender">زن
+                        <input type="checkbox" name="gender">مرد
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!--End modal-->
+
+<!--Start slider-->
+<section class="container-fluid slideshow" id="slideshow">
+    <div class="row ">
+        <div class="col-md-12 slider-padding">
+            <img src="~/Content/img/market(edit).jpg">
+        </div>
+    </div>
+</section>
+<!--End slider-->
+<!--Start brand section-->
+<section class="container-fluid brand img-style " id="brand">
+    <div class="row col-padding">
+        <div class="title-section">
+            <h1 class="text-center wow bounceInDown">بازاریابی</h1>
+        </div>
+        <div class="mg-top">
+            <div class="col-sm-12 col-md-6 wow bounceInRight">
+                <div class="thumbnail-custom">
+                    <h2>بازاریابی و برندینگ</h2>
+                    <h3>مشاوره در زمینه انواع روشهاي تولید محتوا</h3>
+                    <h3>راهکارهاي فروش مستقیم</h3>
+                    <h3>مشاوره ایجادکانال هاي توزیع</h3>
+                    <h3>تولید انواع محتواها شامل: فیلم، صوت، متن، اینفوگرافیک، نرمافزارهاي</h3>
+                </div>
+                <a href="@Url.Action("","Home")" style="text-decoration: none" target="_blank">
+                <button type="button" class="btn btn-warning btn-lg center-block wow bounceInUp">
+                    ورورد به بخش برندینگ
+                </button>
+                </a>
+            </div>
+            <div class="col-sm-12 col-md-6 wow bounceInLeft">
+                <div class="thumbnail-custom box2">
+                    <h2>بازاریابی اینترنتی</h2>
+                    <h3>طراحی وبسایت و فرایندهاي آن</h3>
+                    <h3>تولید محتواي سایت و شبکه هاي اجتماعی</h3>
+                    <h3>بازاریابی ایمیلی، تبلیغات بنری</h3>
+                    <h3>تهیه برنامه استراتژیک</h3>
+                </div>
+                <a href="@Url.Action("internetmarketing","Home")" style="text-decoration: none" target="_blank">
+                    <button type="button" class="btn btn-warning btn-lg center-block wow bounceInUp">
+                        ورورد به بخش
+                        بازاریابی اینترنتی
+                    </button>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+<!--End brand section-->
+<!--Start insurance section-->
+<section class="container-fluid insurance img-style " id="insurance">
+    <div class="row col-padding wow bounceInDown">
+        <div class="title-section text-center">
+            <h1 class="wow rotateIn">بیمه</h1>
+        </div>
+        <div class="mg-top">
+            <div class="col-sm-12 col-md-6 wow bounceInRight">
+                <div class="thumbnail thumbnail-custom">
+                    <span class="fa fa-shield"></span>
+                    <h2 class="text-center center-block">صدور بیمه نامه</h2>
+                    <p class="text-center">
+                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از
+                        طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای
+                        شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای
+                        زیادی در شصت و سه درصد گذشته،
+                    </p>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 wow bounceInLeft">
+                <div class="thumbnail thumbnail-custom">
+                    <span class="fa fa-comment"></span>
+                    <h2 class="text-center center-block">مشاوره تخصصی بیمه</h2>
+                    <p class="text-center ">
+                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از
+                        طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای
+                        شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای
+                        زیادی در شصت و سه درصد گذشته،
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button type="button" class="btn btn-lg btn-warning center-block wow bounceInUp">ورود به بخش بیمه</button>
+</section>
+<!--End insurance section-->
+<!--Start financial section-->
+<section class="container-fluid financial img-style " id="financial">
+    <div class="row col-padding">
+        <div class="title-section">
+            <h1 class="text-center wow bounceInDown">امور مالیاتی</h1>
+        </div>
+        <div class="mg-top">
+            <div class="col-sm-6 col-md-3 wow bounceInRight">
+                <img src="~/Content/img/icons/register.png" width="100" class="center-block img-responsive" alt="register">
+                <h2 class="text-center"> تنظیم اظهارنامه مالیات</h2>
+                <p class="text-center">
+                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان
+                    گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی
+                    تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.
+                </p>
+            </div>
+            <div class="col-sm-6 col-md-3 wow bounceInRight">
+                <img src="~/Content/img/icons/percent.png" width="100" class="center-block img-responsive" alt="percent">
+                <h2 class="text-center">تنظیم گزارش مالیات</h2>
+                <p class="text-center">
+                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان
+                    گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی
+                    تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.
+                </p>
+            </div>
+            <div class="col-sm-6 col-md-3 wow bounceInLeft">
+                <img src="~/Content/img/icons/coin.png" width="100" class="center-block img-responsive" alt="coin">
+                <h2 class="text-center">دریافت گواهینامه </h2>
+                <p class="text-center">
+                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان
+                    گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی
+                    تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.
+                </p>
+            </div>
+            <div class="col-sm-6 col-md-3 wow bounceInLeft">
+                <img src="~/Content/img/icons/calculate.png" width="100" class="center-block img-responsive" alt="calculate">
+                <h2 class="text-center">تنظیم گزارشات فصلی</h2>
+                <p class="text-center">
+                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان
+                    گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی
+                    تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.
+                </p>
+            </div>
+        </div>
+    </div>
+    <button type="button" class="btn btn-lg btn-primary center-block wow bounceInUp">ورود به بخش مالیات</button>
+</section>
+<!--End financial section-->
+<!--Start  company section-->
+<section class="container-fluid company img-style wow fadeInUp " id="company">
+    <div class="row col-padding ">
+        <div class="title-section text-center">
+            <h1 class="wow bounceInDown">ثبت امور شرکتی</h1>
+        </div>
+        <div class="mg-top">
+            <div class=" col-sm-12 col-md-12">
+                <div class="panel panel-custom">
+                    <div class="panel-body panel-body-custom">
+                        <h2 class="text-center">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت</h2>
+                    </div>
+                    <p class="text-center">
+                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                        استفاده از
+                        طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم
+                        است و
+                        برای
+                        شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می
+                        باشد.
+                        کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می
+                        طلبد
+                    </p>
+
+                    <button class="btn btn-success center-block">ثبت شرکت</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--End company section-->
+<!--Start develop section-->
+<section class="container-fluid develop img-style wow fadeInUp" id="develop">
+    <div class="row col-padding">
+        <div class="title-section text-center">
+            <h1 class="wow bounceInDown">توسعه فردی</h1>
+        </div>
+        <div class="mg-top">
+            <div class="col-md-4 wow fadeIn">
+                <div class="panel panel-custom">
+                    <div class="panel-body panel-success">
+                        <img class="img-thumbnail img-responsive center-block" src="~/Content/img/touch.jpg" alt="develop">
+                        <div class="caption">
+                            <h2 class="text-center">تست شخصیت شناسی دیسک</h2>
+                            <p>
+                                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک
+                                است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط
+                                فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای
+                                زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با
+                                نرم افزارها شناخت
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 wow fadeIn">
+                <div class="panel panel-custom">
+                    <div class="panel-body panel-success">
+                        <img class="img-thumbnail img-responsive center-block" src="~/Content/img/touch.jpg" alt="develop">
+                        <div class="caption">
+                            <h2 class="text-center">به صورت آنلاین MBTI تست</h2>
+                            <p>
+                                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک
+                                است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط
+                                فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای
+                                زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با
+                                نرم افزارها شناخت
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 wow fadeIn">
+                <div class="panel panel-custom">
+                    <div class="panel-body panel-success">
+                        <img class="img-thumbnail img-responsive center-block" src="~/Content/img/touch.jpg" alt="develop">
+                        <div class="caption">
+                            <h2 class="text-center">مشاوره برنامه ریزي مالی شخصی</h2>
+                            <p>
+                                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک
+                                است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط
+                                فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای
+                                زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با
+                                نرم افزارها شناخت
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="btn btn-danger btn-lg center-block wow bounceInUp">شروع تست</button>
+        </div>
+    </div>
+</section>
+<!--End develop section-->
+<!--Start resume-->
+<section class="container-fluid resume img-style " id="resume">
+    <div class="row col-padding">
+        <div class="title-section text-center">
+            <h1 class="wow bounceInDown">سوابق کاری</h1>
+        </div>
+        <div class="mg-top">
+            <div class="col-sm-12 col-md-4 padding wow fadeIn">
+                <div class="ih-item square effect6 from_top_and_bottom">
+                    <a href="#">
+                        <div class="img">
+                            <img src="~/Content/img/work.jpg" class="img-responsive center-block img-rounded" alt="img">
+                        </div>
+                        <h2 class="caption-custom text-center">رزومه اول</h2>
+                        <div class="info">
+                            <p>
+                                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.
+                                چاپگرها و متون بلکه روزنامه و
+                            </p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-4 padding wow fadeIn">
+                <div class="ih-item square effect6 from_top_and_bottom">
+                    <a href="#">
+                        <div class="img">
+                            <img src="~/Content/img/work2.jpg" class="img-responsive center-block img-rounded" alt="img">
+                        </div>
+                        <h2 class="caption-custom text-center">رزومه سوم</h2>
+                        <div class="info">
+                            <p>
+                                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.
+                                چاپگرها و متون بلکه روزنامه و
+                            </p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-4 padding wow fadeIn">
+                <div class="ih-item square effect6 from_top_and_bottom">
+                    <a href="#">
+                        <div class="img">
+                            <img src="~/Content/img/work3.jpg" class="img-responsive center-block img-rounded" alt="img">
+                        </div>
+                        <h2 class="caption-custom text-center">رزومه سوم</h2>
+                        <div class="info">
+                            <p>
+                                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.
+                                چاپگرها و متون بلکه روزنامه و
+                            </p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-4 padding wow fadeIn">
+                <div class="ih-item square effect6 from_top_and_bottom">
+                    <a href="#">
+                        <div class="img">
+                            <img src="~/Content/img/work.jpg" class="img-responsive center-block img-rounded" alt="img">
+                        </div>
+                        <h2 class="caption-custom text-center">رزومه اول</h2>
+                        <div class="info">
+                            <p>
+                                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.
+                                چاپگرها و متون بلکه روزنامه و
+                            </p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-4 padding wow fadeIn">
+                <div class="ih-item square effect6 from_top_and_bottom">
+                    <a href="#">
+                        <div class="img">
+                            <img src="~/Content/img/work2.jpg" class="img-responsive center-block img-rounded" alt="img">
+                        </div>
+                        <h2 class="caption-custom text-center">رزومه دوم</h2>
+                        <div class="info">
+                            <p>
+                                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.
+                                چاپگرها و متون بلکه روزنامه و
+                            </p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-4 padding wow fadeIn">
+                <div class="ih-item square effect6 from_top_and_bottom">
+                    <a href="#">
+                        <div class="img">
+                            <img src="~/Content/img/work3.jpg" class="img-responsive center-block img-rounded" alt="img">
+                        </div>
+                        <h2 class="caption-custom text-center">رزومه سوم</h2>
+                        <div class="info">
+                            <p>
+                                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.
+                                چاپگرها و متون بلکه روزنامه و
+                            </p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--End resume-->
+<!--Start gallery-->
+<section class="container-fluid gallery img-style " id="gallery">
+    <div class="mg-top">
+        <div class="row col-padding ">
+            <div class="title-section text-center">
+                <h1 class="wow bounceInDown">گالری</h1>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-md-12">
+                    <h2 class="center-block text-center">اعضا</h2>
+                </div>
+            </div>
+            <div class="gallery-slider">
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                    <div>
+                        <div class="ih-item square effect13 left_to_right">
+                            <a href="#">
+                                <div class="img">
+                                    <img src="~/Content/img/members/member.jpg"
+                                         class="center-block img-thumbnail img-responsive" alt="img">
+                                </div>
+                                <div class="info">
+                                    <p>نمایش کامل</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                    <div>
+                        <div class="ih-item square effect13 left_to_right">
+                            <a href="#">
+                                <div class="img">
+                                    <img src="~/Content/img/members/member2.png"
+                                         class="center-block img-thumbnail img-responsive">
+                                </div>
+                                <div class="info">
+                                    <p>نمایش کامل</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                    <div>
+                        <div class="ih-item square effect13 left_to_right">
+                            <a href="#">
+                                <div class="img">
+                                    <img src="~/Content/img/members/member3.jpg"
+                                         class="center-block img-thumbnail img-responsive">
+                                </div>
+                                <div class="info">
+                                    <p>نمایش کامل</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                    <div>
+                        <div class="ih-item square effect13 left_to_right">
+                            <a href="#">
+                                <div class="img">
+                                    <img src="~/Content/img/members/member4.jpg"
+                                         class="center-block img-thumbnail img-responsive">
+                                </div>
+                                <div class="info">
+                                    <p>نمایش کامل</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                    <div>
+                        <div class="ih-item square effect13 left_to_right">
+                            <a href="#">
+                                <div class="img">
+                                    <img src="~/Content/img/members/member.jpg"
+                                         class="center-block img-thumbnail img-responsive">
+                                </div>
+                                <div class="info">
+                                    <p>نمایش کامل</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                    <div>
+                        <div class="ih-item square effect13 left_to_right">
+                            <a href="#">
+                                <div class="img">
+                                    <img src="~/Content/img/members/member.jpg"
+                                         class="center-block img-thumbnail img-responsive">
+                                </div>
+                                <div class="info">
+                                    <p>نمایش کامل</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                    <div>
+                        <div class="ih-item square effect13 left_to_right">
+                            <a href="#">
+                                <div class="img">
+                                    <img src="~/Content/img/members/member4.jpg"
+                                         class="center-block img-thumbnail img-responsive">
+                                </div>
+                                <div class="info">
+                                    <p>نمایش کامل</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                    <div>
+                        <div class="ih-item square effect13 left_to_right">
+                            <a href="#">
+                                <div class="img">
+                                    <img src="~/Content/img/members/member3.jpg"
+                                         class="center-block img-thumbnail img-responsive">
+                                </div>
+                                <div class="info">
+                                    <p>نمایش کامل</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--End gallery-->
+<!--Start  about us-->
+<section class="container-fluid about-us " id="about">
+    <div class="row col-padding wow fadeInUp">
+        <div class="title-section text-center">
+            <h1 class="wow bounceInDown">درباره ما</h1>
+            <div class="center-block img-rounded-custom img-responsive img-style"></div>
+        </div>
+        <div class="mg-top">
+            <div class="col-sm-12 col-md-7 pull-left wow fadeInUp">
+                <h2 class="center-block text-center">اهداف شرکت</h2>
+                <p class="text-justify">
+                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده
+                    از طراحان
+                    گرافیک است.
+                    چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی
+                    تکنولوژی
+                    مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه
+                    درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت
+                    بیشتری
+                    ید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد
+                    نیاز شامل
+                    حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده
+                    قرار گیرد.
+                    را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد.
+                </p>
+            </div>
+            <div class="col-sm-12 col-md-5 pull-right wow fadeInUp">
+                <img src="~/Content/img/about1.jpg" class="center-block img-responsive">
+            </div>
+        </div>
+    </div>
+</section>
+<!--End about us-->
+<!--Start contact-us-->
+<section class="container-fluid contact-us wow fadeInUp " id="contact">
+    <div class="row col-padding ">
+        <div class="title-section text-center">
+            <h1 class="wow bounceInDown">تماس با ما</h1>
+            <div class="center-block img-rounded-custom img-responsive img-style"></div>
+        </div>
+        <div class="mg-top">
+            <iframe class="col-sm-12 col-md-6 pull-right wow fadeInUp"
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d904.2247241421913!2d50.99823036791232!3d35.83128561216406!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1497377649800"
+                    width="500" height="370" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+        <div class="col-sm-12 col-md-6 pull-left wow fadeInUp">
+            <div class="panel panel-custom ">
+                <div class="panel-heading panel-heading-custom text-center">
+                    <h3 class="contact-info">اطلاعات تماس</h3>
+                </div>
+                <div class="panel-body">
+                    <h4 class="pull-right">شماره تماس</h4>
+                    <P class="pull-left">09384953091</P>
+                    <div class="clear"></div>
+                    <h4 class="pull-right">ایمیل</h4>
+                    <P class="pull-left">mehdee.yazdanian@gmail.com </P>
+                    <div class="clear"></div>
+                    <h4 class="pull-right">آدرس دفتر</h4>
+                    <P class="pull-left">کرج - میدان آزادگان - بلوار مطهری - جنب اطلس پود </P>
+                </div>
+                <div class="panel-footer">
+                    <div class="social text-center">
+                        <h3>مارا در شبکه های اجتماعی دنبال کنید</h3>
+                        <a href="#"><span class="fa fa-instagram"></span></a>
+                        <a href="#"><span class="fa fa-paper-plane"></span></a>
+                        <a href="#"><span class="fa fa-facebook"></span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--End contact-us-->
