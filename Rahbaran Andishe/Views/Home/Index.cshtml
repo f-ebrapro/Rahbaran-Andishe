@@ -13,35 +13,31 @@
     </div>
 </div>
 <!--End modal-->
-<!--Start modal-order-->
-<div class="modal fade" id="modal-order">
-    <div class="modal-dialog">
+<!--Start brand modal-->
+<div class="modal fade" id="brand-modal" role="dialog">
+    <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header modal-header-custom">
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h1 class="text-center modal-title">سفارش سرویس</h1>
+                <div class="modal-title">
+                    <h1 class="text-center">بازاریابی و برندینگ</h1>
+                </div>
             </div>
             <div class="modal-body modal-body-custom">
-                <form>
-                    <div class="form-group input-group">
-                        <span class="input-group-addon">نام :</span>
-                        <input class="form-control" type="text" placeholder="نام خود را وارد کنید">
-                    </div>
-                    <div class="form-group input-group">
-                        <span class="input-group-addon">نام خانوادگی :</span>
-                        <input class="form-control" type="text" placeholder="نام خانوادگی خود را وارد کنید">
-                    </div>
-                    <div class="form-group">
-                        <input type="checkbox" name="gender">زن
-                        <input type="checkbox" name="gender">مرد
-                    </div>
-                </form>
+                <div class="thumbnail-custom">
+                    <p>
+                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.
+                        چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی
+                        مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه
+                        درصد گذشته
+                    </p>
+                </div>
+                <button type="button" class="btn btn-info center-block btn-lg">ورود به فرم</button>
             </div>
         </div>
     </div>
 </div>
-<!--End modal-->
-
+<!--end brand modal-->
 <!--Start slider-->
 <section class="container-fluid slideshow" id="slideshow">
     <div class="row ">
@@ -60,27 +56,42 @@
         <div class="mg-top">
             <div class="col-sm-12 col-md-6 wow bounceInRight">
                 <div class="thumbnail-custom">
-                    <h2>بازاریابی و برندینگ</h2>
-                    <h3>مشاوره در زمینه انواع روشهاي تولید محتوا</h3>
-                    <h3>راهکارهاي فروش مستقیم</h3>
-                    <h3>مشاوره ایجادکانال هاي توزیع</h3>
-                    <h3>تولید انواع محتواها شامل: فیلم، صوت، متن، اینفوگرافیک، نرمافزارهاي</h3>
+                    <h2> بازاریابی و برندینگ</h2>
+                    <h3>
+                        <a href="#" data-toggle="modal" data-target="#brand-modal">
+                            مشاوره در زمینه انواع روشهاي تولید
+                            محتوا
+                        </a>
+                    </h3>
+                    <h3><a href="#" data-toggle="modal" data-target="#brand-modal"> راهکارهاي فروش مستقیم</a></h3>
+                    <h3><a href="#" data-toggle="modal" data-target="#brand-modal">مشاوره ایجادکانال هاي توزیع</a></h3>
+                    <h3>
+                        <a href="#" data-toggle="modal" data-target="#brand-modal">
+                            تولید انواع محتواها شامل: فیلم، صوت،
+                            متن، اینفوگرافیک، نرمافزارهاي
+                        </a>
+                    </h3>
                 </div>
-                <a href="@Url.Action("","Home")" style="text-decoration: none" target="_blank">
                 <button type="button" class="btn btn-warning btn-lg center-block wow bounceInUp">
                     ورورد به بخش برندینگ
                 </button>
-                </a>
             </div>
             <div class="col-sm-12 col-md-6 wow bounceInLeft">
                 <div class="thumbnail-custom box2">
                     <h2>بازاریابی اینترنتی</h2>
-                    <h3>طراحی وبسایت و فرایندهاي آن</h3>
-                    <h3>تولید محتواي سایت و شبکه هاي اجتماعی</h3>
-                    <h3>بازاریابی ایمیلی، تبلیغات بنری</h3>
-                    <h3>تهیه برنامه استراتژیک</h3>
+                    <h3><a href="#" data-toggle="modal" data-target="#brand-modal">طراحی وبسایت و فرایندهاي آن</a></h3>
+                    <h3>
+                        <a href="#" data-toggle="modal" data-target="#brand-modal">
+                            تولید محتواي سایت و شبکه هاي
+                            اجتماعی
+                        </a>
+                    </h3>
+                    <h3>
+                        <a href="#" data-toggle="modal" data-target="#brand-modal">بازاریابی ایمیلی، تبلیغات بنری</a>
+                    </h3>
+                    <h3><a href="#" data-toggle="modal" data-target="#brand-modal">تهیه برنامه استراتژیک</a></h3>
                 </div>
-                <a href="@Url.Action("internetmarketing","Home")" style="text-decoration: none" target="_blank">
+                <a href="internet-marketing.html" style="text-decoration: none" target="_blank">
                     <button type="button" class="btn btn-warning btn-lg center-block wow bounceInUp">
                         ورورد به بخش
                         بازاریابی اینترنتی
@@ -172,7 +183,7 @@
             </div>
         </div>
     </div>
-    <button type="button" class="btn btn-lg btn-primary center-block wow bounceInUp">ورود به بخش مالیات</button>
+    <button type="button" class="btn btn-lg btn-primary center-block wow bounceInUp">درخواست مشاوره رایگان</button>
 </section>
 <!--End financial section-->
 <!--Start  company section-->
@@ -273,7 +284,7 @@
 <section class="container-fluid resume img-style " id="resume">
     <div class="row col-padding">
         <div class="title-section text-center">
-            <h1 class="wow bounceInDown">سوابق کاری</h1>
+            <h1 class="wow bounceInDown">سوابق و رزومه ها</h1>
         </div>
         <div class="mg-top">
             <div class="col-sm-12 col-md-4 padding wow fadeIn">
@@ -376,6 +387,138 @@
     </div>
 </section>
 <!--End resume-->
+<!--ُStart link section-->
+<section class="container-fluid link img-style " id="link">
+    <div class="mg-top">
+        <div class="row col-padding ">
+            <div class="title-section text-center">
+                <h1 class="wow bounceInDown">لینک ها</h1>
+            </div>
+            <div class="row">
+                <div class="gallery-slider">
+                    <div class="col-xs-12 col-sm-6 col-md-3">
+                        <div>
+                            <div class="ih-item square effect13 left_to_right">
+                                <a href="#">
+                                    <div class="img">
+                                        <img src="~/Content/img/members/member.jpg"
+                                             class="center-block img-thumbnail img-responsive" alt="img">
+                                    </div>
+                                    <div class="info">
+                                        <p>نمایش کامل</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-3">
+                        <div>
+                            <div class="ih-item square effect13 left_to_right">
+                                <a href="#">
+                                    <div class="img">
+                                        <img src="~/Content/img/members/member2.png"
+                                             class="center-block img-thumbnail img-responsive">
+                                    </div>
+                                    <div class="info">
+                                        <p>نمایش کامل</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-3">
+                        <div>
+                            <div class="ih-item square effect13 left_to_right">
+                                <a href="#">
+                                    <div class="img">
+                                        <img src="~/Content/img/members/member3.jpg"
+                                             class="center-block img-thumbnail img-responsive">
+                                    </div>
+                                    <div class="info">
+                                        <p>نمایش کامل</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-3">
+                        <div>
+                            <div class="ih-item square effect13 left_to_right">
+                                <a href="#">
+                                    <div class="img">
+                                        <img src="~/Content/img/members/member4.jpg"
+                                             class="center-block img-thumbnail img-responsive">
+                                    </div>
+                                    <div class="info">
+                                        <p>نمایش کامل</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-3">
+                        <div>
+                            <div class="ih-item square effect13 left_to_right">
+                                <a href="#">
+                                    <div class="img">
+                                        <img src="~/Content/img/members/member.jpg"
+                                             class="center-block img-thumbnail img-responsive">
+                                    </div>
+                                    <div class="info">
+                                        <p>نمایش کامل</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-3">
+                        <div>
+                            <div class="ih-item square effect13 left_to_right">
+                                <a href="#">
+                                    <div class="img">
+                                        <img src="~/Content/img/members/member.jpg"
+                                             class="center-block img-thumbnail img-responsive">
+                                    </div>
+                                    <div class="info">
+                                        <p>نمایش کامل</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-3">
+                        <div>
+                            <div class="ih-item square effect13 left_to_right">
+                                <a href="#">
+                                    <div class="img">
+                                        <img src="~/Content/img/members/member4.jpg"
+                                             class="center-block img-thumbnail img-responsive">
+                                    </div>
+                                    <div class="info">
+                                        <p>نمایش کامل</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-3">
+                        <div>
+
+                            <img src="~/Content/img/members/member3.jpg"
+                                 class="center-block img-thumbnail img-responsive">
+
+                            <p>نمایش کامل</p>
+                        </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+</section>
+<!--ُEnd link section-->
 <!--Start gallery-->
 <section class="container-fluid gallery img-style " id="gallery">
     <div class="mg-top">

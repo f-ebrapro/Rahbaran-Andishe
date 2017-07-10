@@ -9,7 +9,7 @@
     <title>Brand</title>
 </head>
 <body>
-    <!--Start header-->
+    <!--Start navigation-->
     <nav class="navbar navbar-custom">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle navbar-toggle-custom" data-toggle="collapse"
@@ -22,17 +22,17 @@
         <div class="collapse navbar-collapse" id="menu">
             <address class="pull-left">
                 <span class="fa fa-phone "></span>
-                <p class="pull-left"> تلفن تماس : 09358283494 </p>
+                <p class="pull-left"> تلفن تماس : 09384953091 </p>
             </address>
             <ul class="nav navbar-nav navbar-nav-custom ">
-                <li>
-                    <a href="@Url.Action("Index", "Home")" target="_blank"> صفحه اصلی</a>
-                </li>
+                <li><a href="index.html" target="_blank"> صفحه اصلی</a></li>
             </ul>
         </div>
     </nav>
-    <!--End header-->
+    <!--End navigation-->
+
     @RenderBody()
+
     <!--Start footer content section-->
     <section class="container-fluid footer-content ">
         <div class="row">
@@ -67,10 +67,12 @@
     <footer class="container-fluid primary-footer">
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12  ">
-                <h4 class="text-center">تمامی حقوق این سایت برای راهبران اندیشه محفوظ است</h4>
-                <a href="#" class="text-center center-block">
-                    طراحی توسط یک دیزاینر
-                </a>
+                <div class="footer-right-container">
+                    <h4 class="text-center">تمامی حقوق این سایت برای راهبران اندیشه محفوظ است</h4>
+                    <a href="https://www.instagram.com/one___designer/" class="text-center center-block">
+                        طراحی توسط یک دیزاینر
+                    </a>
+                </div>
             </div>
         </div>
     </footer>
