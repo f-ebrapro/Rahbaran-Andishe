@@ -1,0 +1,176 @@
+﻿@using WebApplication1.Infra.Keys
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+    <link href="~/Content/Content/jquery-ui/jquery-ui-1.10.1.custom.css" rel="stylesheet" />
+    <link href="~/Content/Content/bootstrap-rtl.css" rel="stylesheet" />
+    <link href="~/Content/Content/bootstrap-reset.css" rel="stylesheet" />
+    <link href="~/Content/Content/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link href="~/Content/Content/bootstrap-fileupload/bootstrap-fileupload.css" rel="stylesheet" />
+    <link href="~/Content/Scripts/js/data-tables/DT_bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/Content/style.css" rel="stylesheet" />
+    <link href="~/Content/Content/style-responsive.css" rel="stylesheet" />
+
+    <script src="~/Content/Scripts/modernizr-2.8.3.js"></script>
+
+    <!--This bundle was moved by the Telerik VS Extensions for compatibility reasons-->
+    <script src="~/Content/Scripts/jquery-2.1.4.js"></script>
+
+</head>
+
+<body>
+    <div class="k-rtl">
+        <section id="container">
+            <!--header start-->
+            <header class="header fixed-top clearfix">
+                <div style="width: 80%; height: 80px; float: left;">
+                    <a href="@Url.Action("index","Home")">
+                    <img src="~/Content/image/logo-mobinnet.png" style="float: left; margin-top: 25px; margin-left: 4%;"/>
+                    </a>
+                </div>
+                <!--logo start-->
+                <div class="brand">
+                    <a href="@Url.Action("index","Admin")" class="logo">
+                        بخش مدیریت سایت
+                    </a>
+                    <div class="sidebar-toggle-box">
+                        <div id="MenuRight" class="fa fa-bars"></div>
+                    </div>
+                </div>
+                <!--logo end-->
+            </header>
+            <!--header end-->
+            <aside>
+                <div id="sidebar" class="nav-collapse">
+                    <!-- sidebar menu start-->
+                    <div class="leftside-navigation">
+                        <ul class="sidebar-menu" id="nav-accordion">
+                            <li>
+                                <a class="active" href="@Url.Action("Index","Admin")">
+                                    <i class="fa fa-dashboard"></i>
+                                    <span>داشبورد</span>
+                                </a>
+                            </li>
+                            <li class="sub-menu">
+                                <a href="javascript:;">
+                                    <i class="fa fa-laptop"></i>
+                                    <span>محصولات</span>
+                                </a>
+                                <ul class="sub">
+                                    <li><a href="@Url.Action("Index","AdminIM")">لیست محصولات</a></li>
+                                    <li><a href="@Url.Action("Add","AdminIM")">افزودن محصول</a></li>
+                                </ul>
+                            </li>
+                            <li class="sub-menu">
+                                <a href="javascript:;">
+                                    <i class="fa fa-outdent"></i>
+                                    <span>سفارشات</span>
+                                </a>
+                                <ul class="sub">
+                                    <li><a href="@Url.Action("Orders","Admin")">لیست سفارش ها</a></li>
+                                </ul>
+                            </li>
+                            @*<li class="sub-menu">
+                                <a href="javascript:;">
+                                    <i class="fa fa-image"></i>
+                                    <span>اسلایدر</span>
+                                </a>
+                                <ul class="sub">
+                                    <li><a href="@Url.Action("Index","Slider")">لیست اسلایدر ها</a></li>
+                                    <li><a href="@Url.Action("Add","Slider")">افزودن اسلایدر</a></li>
+                                </ul>
+                            </li>*@
+                            @*<li class="sub-menu">
+                                <a href="javascript:;">
+                                    <i class="fa fa-paperclip"></i>
+                                    <span>صفحات</span>
+                                </a>
+                                <ul class="sub">
+                                    <li><a href="./AdminPageGroups">مدیریت گروه های صفحات</a></li>
+                                    <li><a href="./AdminPages">مدیریت صفحات</a></li>
+                                </ul>
+                            </li>*@
+                            @*<li class="sub-menu">
+                                <a href="javascript:;">
+                                    <i class="fa fa-comments"></i>
+                                    <span>نظرات</span>
+                                </a>
+                                <ul class="sub">
+                                    <li><a href="./AdminComments">مدیریت کامنت ها</a></li>
+                                </ul>
+                            </li>*@
+                            @*<li class="sub-menu">
+                                <a href="javascript:;">
+                                    <i class="fa fa-archive"></i>
+                                    <span>کالا</span>
+                                </a>
+                                <ul class="sub">
+                                    <li><a href="./AdminProductGroups">مدیریت گروه های کالاها</a></li>
+                                    <li><a href="./AdminProducts">مدیریت کالاها</a></li>
+                                    <li><a href="./Brands">مدیریت برند ها</a></li>
+
+                                </ul>
+                            </li>*@
+                        </ul>
+                    </div>
+                    <!-- sidebar menu end-->
+                </div>
+            </aside>
+            <section id="main-content">
+                <section class="wrapper">
+                    <div class="row">
+                        <div class="col-md-12">
+                            @if (TempData[Constants.MessageKey] != null)
+                            {
+                                <div class="alert alert-@TempData[Constants.ColorKey]">@TempData[Constants.MessageKey]</div>    
+                            }
+                            @RenderBody()
+                        </div>
+                    </div>
+                </section>
+
+            </section>
+        </section>
+    </div>
+    <script src="~/Content/Scripts/jquery-ui-1.11.2.js"></script>
+    <script src="~/Content/Scripts/jquery.unobtrusive-ajax.js"></script>
+    <script src="~/Content/Scripts/jquery.validate.js"></script>
+    <script src="~/Content/Scripts/jquery.validate.unobtrusive.js"></script>
+    <script src="~/Content/Scripts/bootstrap-fileupload.js"></script>
+    <script src="~/Content/Scripts/bootstrap-rtl.js"></script>
+    <script src="~/Content/Scripts/jquery.dcjqaccordion.2.7.js"></script>
+    <script src="~/Content/Scripts/jquery.scrollTo.js"></script>
+    <script src="~/Content/Scripts/jquery.nicescroll.js"></script>
+    <script src="~/Content/Scripts/jquery.scrollTo/jquery.scrollTo.js"></script>
+    <script src="~/Content/Scripts/js/data-tables/jquery.dataTables.js"></script>
+    <script src="~/Content/Scripts/js/data-tables/DT_bootstrap.js"></script>
+    <script src="~/Content/Scripts/js/scripts.js"></script>
+    <script src="~/Content/Scripts/js/table-editable.js"></script>
+    <script src="~/Content/Scripts/eshop.js"></script>
+
+    <script src="~/Content/Scripts/bootstrap-rtl.js"></script>
+    <script src="~/Content/Scripts/respond.js"></script>
+
+
+    <script>
+        $(document).ready(function () {
+            EditableTable.init();
+            $("form").addClass("form-horizontal").attr("role", "form");
+            $("#buttons * *").addClass("btn btn-primary");
+            $('input[type="text"],input[type="datetime"],input[type="password"],textarea,select').addClass("form-control");
+        });
+    </script>
+</body>
+
+<!-- END BODY -->
+</html>

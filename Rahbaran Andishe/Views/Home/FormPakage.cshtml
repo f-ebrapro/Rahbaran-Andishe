@@ -1,0 +1,157 @@
+﻿@using System.Collections.Generic
+@using Rahbaran_Andishe.Models
+@model Rahbaran_Andishe.Models.Form
+
+@{
+    ViewBag.Title = "FormPakage";
+    Layout = "~/Views/Shared/_Layout_Additional.cshtml";
+    var mylistcity = ViewBag.CityCategories as List<Rahbaran_Andishe.Models.CityCategory>;
+    var mylistOtherfield = ViewBag.OtherfieldsCategories as List<Rahbaran_Andishe.Models.OtherfieldsCategory>;
+
+}
+
+<style>
+    body {
+        background: #edeeeb;
+    }
+
+    .label-radius {
+        border-radius: 25px 0px 0px 25px;
+    }
+
+    #hr-style {
+        width: 100%;
+        margin-right: -7PX;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        border: 0;
+        border-top: 2px solid rgb(69,90,133);
+    }
+</style>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="container form" style="margin-bottom: 50px;">
+        <div class="row mg-top">
+            <div class="title-section">
+                <h3 class="text-center"> خرید پکیج</h3>
+            </div>
+        </div>
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        <div class="col-xs-12 col-sm-12 col-md-10 col-md-offset-2 thumbnail-custom">
+            <div class="form-group input-group">
+                @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "input-group-addon" })
+                <div class="col-md-12" style="padding-right: 0px;">
+                    @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control label-radius" } })
+                    @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group input-group">
+                @Html.LabelFor(model => model.Family, htmlAttributes: new { @class = "input-group-addon" })
+                <div class="col-md-12" style="padding-right: 0px;">
+                    @Html.EditorFor(model => model.Family, new { htmlAttributes = new { @class = "form-control label-radius" } })
+                    @Html.ValidationMessageFor(model => model.Family, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group input-group">
+                @Html.LabelFor(model => model.Generic, htmlAttributes: new { @class = "input-group-addon" })
+                <div class="col-md-12" style="padding-right: 0px;">
+                    <select name="Generic" class="form-control" style="padding: 0px">
+                        <option value="مرد">مرد</option>
+                        <option value="زن">زن</option>
+                    </select>
+                    @Html.ValidationMessageFor(model => model.Generic, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group input-group">
+                @Html.LabelFor(model => model.CompanyName, htmlAttributes: new { @class = "input-group-addon" })
+                <div class="col-md-12" style="padding-right: 0px;">
+                    @Html.EditorFor(model => model.CompanyName, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.CompanyName, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group input-group">
+                @Html.LabelFor(model => model.Industry, htmlAttributes: new { @class = "input-group-addon" })
+                <div class="col-md-12" style="padding-right: 0px;">
+                    @Html.EditorFor(model => model.Industry, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Industry, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group input-group">
+                @Html.LabelFor(model => model.Education, htmlAttributes: new { @class = "input-group-addon" })
+                <div class="col-md-12" style="padding-right: 0px;">
+                    @Html.EditorFor(model => model.Education, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Education, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group input-group">
+                @Html.LabelFor(model => model.PhoneNumber, htmlAttributes: new { @class = "input-group-addon" })
+                <div class="col-md-12" style="padding-right: 0px;">
+                    @Html.EditorFor(model => model.PhoneNumber, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.PhoneNumber, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group input-group">
+                @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "input-group-addon" })
+                <div class="col-md-12" style="padding-right: 0px;">
+                    @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group input-group">
+                @Html.LabelFor(model => model.CityID, htmlAttributes: new { @class = "input-group-addon" })
+                <div class="col-md-12" style="padding-right: 0px;">
+                    <select class="form-control" style="padding: 0px">
+                        @{
+                            foreach (var item in mylistcity)
+                            {
+                                <option value="@item.Id">@item.Title</option>
+                            }
+                        }
+                    </select>
+                    @Html.ValidationMessageFor(model => model.CityID, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            
+            <div class="form-group input-group">
+                @Html.LabelFor(model => model.CityID, htmlAttributes: new { @class = "input-group-addon" })
+                <div class="col-md-12" style="padding-right: 0px;">
+                   @Html.DropDownListFor(x=>x.CityID, new SelectList(ViewBag.Cities,"Id","Title"))
+                </div>
+            </div>
+            <hr id="hr-style" />
+            <div style="font-size: 20px;"> 
+                @Html.LabelFor(model => model.OtherfieldID, htmlAttributes: new { @class = "" })
+            </div>
+            <div class="form-group input-group">
+                <div class="col-md-12" style="padding-right: 0px;">
+                    <form class="form-control col-md-12 radio">
+                        @{
+                            foreach (var items in mylistOtherfield)
+                            {
+                                <label style="margin-left: 10px; font-size: 14px;">
+                                    <input value="@items.Id" type="radio" name="optradio" style="margin-left: 5px;">@items.Title
+                                </label>
+                            }
+                        }
+                    </form>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="ثبت سفارش" class="btn btn-success center-block" />
+                </div>
+            </div>
+        </div>
+    </div>
+                            }
