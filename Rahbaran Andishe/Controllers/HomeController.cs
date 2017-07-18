@@ -33,20 +33,15 @@ namespace Rahbaran_Andishe.Controllers
             ViewBag.CityCategories = query;
             var queryone = dbase.OtherfieldsCategories.ToList();
             ViewBag.OtherfieldsCategories = queryone;
-
-                
-
             return View();
         }
 
+        //protected override void OnActionExecuted(ActionExecutedContext filterContext)
+        //{
+        //    ViewBag.Cities = _db.CityCategories.OrderBy(x => x.Title).ToList();
+        //    ViewBag.OrderFileds = _db.OtherfieldsCategories.OrderBy(x => x.Title).ToList();
 
-        protected override void OnActionExecuted(ActionExecutedContext filterContext)
-        {
-            ViewBag.Cities = _db.CityCategories.OrderBy(x => x.Title).ToList();
-            ViewBag.OrderFileds = _db.OtherfieldsCategories.OrderBy(x => x.Title).ToList();
-
-
-            base.OnActionExecuted(filterContext);
-        }
+        //    base.OnActionExecuted(filterContext);
+        //}
     }
 }

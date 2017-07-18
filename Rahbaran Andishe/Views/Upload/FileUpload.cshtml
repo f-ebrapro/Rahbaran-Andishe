@@ -1,0 +1,19 @@
+﻿@model dynamic
+
+@{
+    ViewBag.Title = "upload file";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<form class="form-control" action="@Url.Action("FileUpload")" method="post" enctype="multipart/form-data">
+
+
+    <input class="input-large" type="file" name="file" value="" />
+
+
+    <input class="btn btn-file" type="submit" value="آپلود عکس" />
+</form>
+
+<br />
+<img heighte="100px" src="@Href("~/Storage/")" alt="" />
+

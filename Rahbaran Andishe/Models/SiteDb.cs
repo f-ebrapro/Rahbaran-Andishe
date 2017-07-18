@@ -15,6 +15,7 @@ namespace Rahbaran_Andishe.Models
         }
 
         public virtual DbSet<Form> Forms { get; set; }
+        public virtual DbSet<Slider> Sliders { get; set; }
         public virtual DbSet<CityCategory> CityCategories { get; set; }
         public virtual DbSet<OtherfieldsCategory> OtherfieldsCategories { get; set; }
     }

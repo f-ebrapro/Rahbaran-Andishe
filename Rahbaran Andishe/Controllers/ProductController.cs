@@ -3,14 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using System.Data.Entity.Migrations;
 using Rahbaran_Andishe.Models;
 
 namespace Rahbaran_Andishe.Controllers
 {
-
-    public class AdminIMController : BaseAdminController
+    public class ProductController : BaseAdminController
     {
+        // GET: Product
         public ActionResult Index()
         {
             var model = Db.Forms.ToList();
@@ -21,11 +20,11 @@ namespace Rahbaran_Andishe.Controllers
         {
             return View();
         }
-
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Add(Form model)
+        public ActionResult Add(Form model, HttpPostedFileBase img)
         {
+            var dbase = new SiteDb();
             if (!ModelState.IsValid)
             {
                 return View(model);
@@ -40,8 +39,6 @@ namespace Rahbaran_Andishe.Controllers
         {
             var model = Db.Forms.Find(id);
 
-            //var m2 = Db.Products.Single(x => x.Id == id);
-
             if (model == null)
             {
                 NotFount();
@@ -50,13 +47,12 @@ namespace Rahbaran_Andishe.Controllers
 
             return View(model);
         }
-
-
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(Form product)
+        public ActionResult Edit(Form product, HttpPostedFileBase img)
         {
             var model = Db.Forms.Find(product.Id);
+
             if (model == null)
             {
                 NotFount();
@@ -67,19 +63,12 @@ namespace Rahbaran_Andishe.Controllers
             Success();
 
             return RedirectToAction("Index");
-
         }
 
         [HttpPost]
         public ActionResult Delete(int id)
         {
             var model = Db.Forms.Find(id);
-
-            if (model == null)
-            {
-                NotFount();
-                return RedirectToAction("Index");
-            }
 
             Db.Forms.Remove(model);
             Db.SaveChanges();

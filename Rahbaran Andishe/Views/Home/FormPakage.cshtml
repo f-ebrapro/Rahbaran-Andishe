@@ -106,21 +106,6 @@
                     @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
                 </div>
             </div>
-
-            <div class="form-group input-group">
-                @Html.LabelFor(model => model.CityID, htmlAttributes: new { @class = "input-group-addon" })
-                <div class="col-md-12" style="padding-right: 0px;">
-                    <select class="form-control" style="padding: 0px">
-                        @{
-                            foreach (var item in mylistcity)
-                            {
-                                <option value="@item.Id">@item.Title</option>
-                            }
-                        }
-                    </select>
-                    @Html.ValidationMessageFor(model => model.CityID, "", new { @class = "text-danger" })
-                </div>
-            </div>
             
             <div class="form-group input-group">
                 @Html.LabelFor(model => model.CityID, htmlAttributes: new { @class = "input-group-addon" })
@@ -132,18 +117,11 @@
             <div style="font-size: 20px;"> 
                 @Html.LabelFor(model => model.OtherfieldID, htmlAttributes: new { @class = "" })
             </div>
+
             <div class="form-group input-group">
+                @Html.LabelFor(model => model.OtherfieldID, htmlAttributes: new { @class = "input-group-addon" })
                 <div class="col-md-12" style="padding-right: 0px;">
-                    <form class="form-control col-md-12 radio">
-                        @{
-                            foreach (var items in mylistOtherfield)
-                            {
-                                <label style="margin-left: 10px; font-size: 14px;">
-                                    <input value="@items.Id" type="radio" name="optradio" style="margin-left: 5px;">@items.Title
-                                </label>
-                            }
-                        }
-                    </form>
+                    @Html.DropDownListFor(x=>x.OtherfieldID, new SelectList(ViewBag.Cities,"Id","Title"))
                 </div>
             </div>
 

@@ -9,7 +9,7 @@ namespace Rahbaran_Andishe.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true;
         }
 
         protected override void Seed(Rahbaran_Andishe.Models.SiteDb context)
