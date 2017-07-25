@@ -49,7 +49,7 @@ namespace Rahbaran_Andishe.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(Form product, HttpPostedFileBase img)
+        public ActionResult Edit(Form product, HttpPostedFileBase img)  
         {
             var model = Db.Forms.Find(product.Id);
 
